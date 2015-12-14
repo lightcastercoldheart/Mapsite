@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Technology Final</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
+	
+	<!-- Include the Google Maps API library - required for embedding maps -->
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+ 
+	// The latitude and longitude of your business / place
+	var position = [10.125971, 124.880280];
+
+	function showGoogleMaps() {
+
+	var latLng = new google.maps.LatLng(position[0], position[1]);
+
+	var mapOptions = {
+		zoom: 18, // initialize zoom level - the max value is 21
+		streetViewControl: false, // hide the yellow Street View pegman
+		scaleControl: true, // allow users to zoom the Google Map
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		center: latLng
+	};
+	
+	map = new google.maps.Map(document.getElementById('googlemaps'),
+		mapOptions);
+
+	// Show the default red marker at the location
+	marker = new google.maps.Marker({
+		position: latLng,
+		map: map,
+		draggable: false,
+		animation: google.maps.Animation.DROP
+		
+	});
+	}
+
+	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+	</script>
+	
+</head>
+<body>
+	<div id="container">
+
+		<div id="circlemenu">
+		</div><!--closes circlemenu-->
+
+		<div id="header">
+			<p> Access Location Roster </p>
+		</div><!--closes header-->
+
+		<div id="sidebar">
+			<ul>
+				<li a href="#">Angela Alarcon</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Fanchiang Li</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Hsin-Hua Lee</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Jeremy Peck</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Jian He</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Jiyea Yoon</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Justin Cheng</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Kirti Vegad</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Melvin Alvarez</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Qiu Xingyi</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Shuhao Shang</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Wei-Lun Huang</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Xinyi Zhang</a></li>
+				<div id="listborder"></div>
+				<li a href="#">Zhaowei Hu</a></li>
+			</ul>
+		</div><!--closes sidebar-->
+
+		<div id="inventory">
+		</div><!--closes inventory-->
+
+		<div id="inventory_2">
+		</div><!--closes inventory-->
+
+		<div id="inventory_3">
+		</div><!--closes inventory-->
+
+		<div id="inventory_4">
+		</div><!--closes inventory-->
+
+		<div id="inventory_5">
+		</div><!--closes inventory-->
+
+		<div id="sidebar_b">
+		</div><!--closes footer_l-->
+
+		<div id="footer">
+		</div><!--closes footer-->
+
+		<div id="googlemaps"></div>
+
+	</div><!--closes container-->
+
+</body>
+</html>
